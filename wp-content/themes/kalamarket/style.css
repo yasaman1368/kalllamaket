@@ -9989,3 +9989,8 @@ body.light .progress-wrap::after {
 body.light .progress-wrap svg.progress-circle path {
     stroke: var(--black-blue);
 }
+/* customize theme */
+.cat-png-icon{
+    max-width: 20px;
+    max-height: 20px;
+}

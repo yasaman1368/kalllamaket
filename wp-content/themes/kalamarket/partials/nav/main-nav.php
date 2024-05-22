@@ -2,180 +2,229 @@
     <div class="d-block">
         <div class="align-items-center">
             <ul class="menu-ul mega-menu-level-one">
-                <li id="nav-menu-item" class="menu-item nav-overlay">
-                    <a href="#" class="current-link-menu">
-                        کالای دیجیتال
-                    </a>
-                    <ul class="sub-menu is-mega-menu mega-menu-level-two">
-                        <li class="menu-mega-item menu-item-type-mega-menu">
-                            <a href="#" class="mega-menu-link">
-                                موبایل
-                            </a>
-                            <ul class="sub-menu mega-menu-level-three">
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        اپل
+                <?php $args = [
+                    'taxonomy' => 'product_cat',
+                    'orderby' => 'id',
+                    'order' => 'ASC',
+                    'parent' => 0,
+                    'hide_empty'      => false,
+                    'exclude' => '15'
+                ] ?>
+                <?php $main_array_cats = get_categories($args) ?>
+                <?php if ($main_array_cats) : ?>
+                    <?php foreach ($main_array_cats as $main_array_cat) : ?>
+                        <li id="nav-menu-item" class="menu-item nav-overlay">
+                            <a href="<?php echo get_category_link($main_array_cat->cat_ID) ?>" class="current-link-menu"><span><img src="<?php echo kmkt_the_cat_thumbnail($main_array_cat->cat_ID) ?>" class="cat-png-icon" alt="">
+                                </span>
+                                <?php echo $main_array_cat->name ?> </a>
+                            <ul class="sub-menu is-mega-menu mega-menu-level-two">
+                                <!-- submenu query -->
+                                <?php $args = [
+                                    'taxonomy' => 'product_cat',
+                                    'orderby' => 'id',
+                                    'order' => 'ASC',
+                                    'hide_empty' => false,
+                                    'parent' => $main_array_cat->cat_ID,
+                                ];
+                                $sub_array_cats = get_categories($args);
+
+                                if ($sub_array_cats) :
+                                    foreach ($sub_array_cats as $sub_array_cat) :
+                                ?>
+
+                                        <li class="menu-mega-item menu-item-type-mega-menu">
+                                            <a href="<?php echo get_category_link($sub_array_cat->cat_ID) ?>" class="mega-menu-link">
+                                                <?php echo $sub_array_cat->name ?>
+                                            </a>
+                                            <ul class="sub-menu mega-menu-level-three">
+                                                <?php $args = [
+                                                    'taxonomy' => 'product_cat',
+                                                    'hide_empty' => false,
+                                                    'parent' => $sub_array_cat->cat_ID,
+                                                    'orderby' => 'id',
+                                                    'order' => 'ASC'
+
+                                                ];
+                                                $super_sub_cats = get_categories($args);
+                                                if ($super_sub_cats) :
+                                                    foreach ($super_sub_cats as $super_sub_cat) :
+                                                ?>
+                                                        <li class="menu-mega-item-three">
+                                                            <a href="<?php echo get_category_link($super_sub_cat->cat_ID) ?>">
+                                                                <?php echo $super_sub_cat->name ?> </a>
+                                                        </li>
+                                                    <?php endforeach ?>
+                                                <?php else : ?>
+                                                    <div class="alert alert-warning">سوپر ساب منو خود را وارد نمایید</div>
+                                                <?php endif ?>
+                                                <!-- <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        سامسونگ
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        نوکیا
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        ایسوس
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        هواوی
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        الجی
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        اچ تی سی
+                                                    </a>
+                                                </li>
+                                                <li class="menu-mega-item-three">
+                                                    <a href="#">
+                                                        سونی
+                                                    </a>
+                                                </li> -->
+                                            </ul>
+                                        </li>
+                                    <?php endforeach ?>
+                                <?php else : ?>
+                                    <div class="alert alert-warning">زیر دسته خود را مشخص کنید.</div>
+                                <?php endif  ?>
+                                <!-- <li class="menu-mega-item menu-item-type-mega-menu">
+                                    <a href="#" class="mega-menu-link">
+                                        تبلت و کتابخوان
                                     </a>
+                                    <ul class="sub-menu mega-menu-level-three">
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                اپل
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                سامسونگ
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                نوکیا
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                ایسوس
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                ایسر
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                الجی
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                اچ تی سی
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        سامسونگ
+                                <li class="menu-mega-item menu-item-type-mega-menu">
+                                    <a href="#" class="mega-menu-link">
+                                        کامپیوتر و تجهیزات جانبی
                                     </a>
+                                    <ul class="sub-menu mega-menu-level-three">
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                هارد دیسک
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                ماوس
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                کیبورد
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                نمایشگر
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                پردازنده
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                مادربرد
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                کارت گرافیک
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        نوکیا
+                                <li class="menu-mega-item menu-item-type-mega-menu">
+                                    <a href="#" class="mega-menu-link">
+                                        دوربین
                                     </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        ایسوس
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        هواوی
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        الجی
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        اچ تی سی
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        سونی
-                                    </a>
+                                    <ul class="sub-menu mega-menu-level-three">
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                دوربین عکاسی
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                دوربین فیلم برداری
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                تلسکوپ
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                میکروسکوپ و ذره بین
+                                            </a>
+                                        </li>
+                                        <li class="menu-mega-item-three">
+                                            <a href="#">
+                                                لوازم جانبی عکاسی و فیلم برداری
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li> -->
+                                <li class="bg-image">
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/menu-main/digital.png" alt="">
                                 </li>
                             </ul>
                         </li>
-                        <li class="menu-mega-item menu-item-type-mega-menu">
-                            <a href="#" class="mega-menu-link">
-                                تبلت و کتابخوان
-                            </a>
-                            <ul class="sub-menu mega-menu-level-three">
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        اپل
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        سامسونگ
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        نوکیا
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        ایسوس
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        ایسر
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        الجی
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        اچ تی سی
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-mega-item menu-item-type-mega-menu">
-                            <a href="#" class="mega-menu-link">
-                                کامپیوتر و تجهیزات جانبی
-                            </a>
-                            <ul class="sub-menu mega-menu-level-three">
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        هارد دیسک
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        ماوس
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        کیبورد
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        نمایشگر
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        پردازنده
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        مادربرد
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        کارت گرافیک
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-mega-item menu-item-type-mega-menu">
-                            <a href="#" class="mega-menu-link">
-                                دوربین
-                            </a>
-                            <ul class="sub-menu mega-menu-level-three">
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        دوربین عکاسی
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        دوربین فیلم برداری
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        تلسکوپ
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        میکروسکوپ و ذره بین
-                                    </a>
-                                </li>
-                                <li class="menu-mega-item-three">
-                                    <a href="#">
-                                        لوازم جانبی عکاسی و فیلم برداری
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="bg-image">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/menu-main/digital.png" alt="">
-                        </li>
-                    </ul>
-                </li>
-                <li id="nav-menu-item" class="menu-item nav-overlay" data-id="190">
+
+                    <?php endforeach ?>
+                <?php else : ?>
+                    <div class="alert alert-warning">دسته بندی محصولات خود را وارد کنید!</div>
+                <?php endif ?>
+                <!-- <li id="nav-menu-item" class="menu-item nav-overlay" data-id="190">
                     <a href="#" class="current-link-menu">
                         آرایشی و بهداشتی
                     </a>
@@ -605,7 +654,7 @@
                     <a href="#" class="current-link-menu">
                         کودک و نوزاد
                     </a>
-                </li>
+                </li> -->
                 <!-- header cart basket -->
                 <li class="divider-space-card d-block">
                     <?php get_template_part('partials/nav/header-cart-basket')
