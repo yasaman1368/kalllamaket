@@ -5,40 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38dcb530-f82c-41d7-b3c6-ffa95f8585d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tahlanji.ir.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/assets/js/front-ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeA -unchanged.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/2024/05/c-s01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/2024/05/c-s02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/2024/05/c-s03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2024-05-29-3cc1668c14bb2bd3d77d7c1c2d946a17.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2024-05-30-1e39de000faedcc15602ad97b2f21f51.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2024-06-02-af6bd427749c036adfdda78f1c6ba7c1.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/_admin-menu-slider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/add-menu-admin-slider.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2024-06-04-a535b8a1c08225060471b6a8b211e571.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-obw-free-extensions-4-0-extensions-json-2024-05-30-33f0058d3968e054b3d57915a38d8fa7.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-inbox-notifications-2-0-notifications-json-2024-06-04-5582f7d78fec3d10f1c9f56756a02429.log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-obw-free-extensions-4-0-extensions-json-2024-06-04-1c26dc01ea1aa337fe1882fe3ea10e31.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-payment-method-promotions-json-2024-05-30-535c941cdff9e3994ac5a4e79244a717.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-suggestions-jsoncountryus-2024-05-30-75e040c79e2becbded26545b5cdaa5ee.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-payment-method-promotions-json-2024-06-04-89b444e9c8bd46f2b26acae544dfd171.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-suggestions-jsoncountryus-2024-06-04-4ba2802117e31e6addf3b59dd38dfd1e.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/register-assets/register-assets.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/register-assets/register-assets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/utilities/utilities.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/utilities/utilities.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeA.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeA.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/archive-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/archive-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/content-product.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/content-product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/global/wrapper-end.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/global/wrapper-end.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/global/wrapper-start.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/global/wrapper-start.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/loop-end.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/loop-end.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/loop-start.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/loop-start.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/orderby.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/orderby.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/sale-flash.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/woocommerce/loop/sale-flash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeB.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeC&amp;D.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeC&amp;D.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,23 +42,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/tahlanji.ir&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/xampp/htdocs/tahlanji.ir",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\tahlanji.ir\wp-content\plugins" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -111,7 +94,8 @@
       <workItem from="1717332471369" duration="3931000" />
       <workItem from="1717419626273" duration="1385000" />
       <workItem from="1717431556680" duration="5817000" />
-      <workItem from="1717486193086" duration="7529000" />
+      <workItem from="1717486193086" duration="8893000" />
+      <workItem from="1717514919901" duration="9280000" />
     </task>
     <servers />
   </component>

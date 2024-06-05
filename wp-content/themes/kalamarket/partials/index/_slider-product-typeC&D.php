@@ -2,7 +2,10 @@
     <div class="slider-widget-products">
         <div class="widget widget-product card">
             <header class="card-header">
-                <span class="title-one">لوازم خانگی</span>
+                <?php
+                $name_slider_3=get_option('_name_slider_3');
+                ?>
+                <span class="title-one"><?php echo isset( $name_slider_3 )? $name_slider_3 : 'نام دسته بندی محصول خود را تنظیم کنید.' ?></span>
                 <h3 class="card-title"></h3>
             </header>
             <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
@@ -208,7 +211,10 @@
     <div class="slider-widget-products">
         <div class="widget widget-product card">
             <header class="card-header">
-                <span class="title-one">کامپیوتر و لپ تاپ</span>
+                <?php
+                $name_slider_4=get_option('_name_slider_4');
+                ?>
+                <span class="title-one"><?php echo  !empty($name_slider_4 )?$name_slider_4 : 'نام دسته بندی محصول خود را تنظیم کنید.' ?></span>
                 <h3 class="card-title"></h3>
             </header>
             <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">

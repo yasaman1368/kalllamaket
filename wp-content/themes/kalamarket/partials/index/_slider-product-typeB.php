@@ -2,7 +2,10 @@
     <div class="slider-widget-products">
         <div class="widget widget-product card">
             <header class="card-header">
-                <span class="title-one">گوشی موبایل</span>
+                <?php
+                $name_slider_2=get_option('_name_slider_2');
+                ?>
+                <span class="title-one"><?php echo  isset($name_slider_2 )?$name_slider_2 : 'نام دسته بندی محصول خود را تنظیم کنید.' ?></span>
                 <h3 class="card-title"></h3>
             </header>
             <div class="product-carousel owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
