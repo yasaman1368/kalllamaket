@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38dcb530-f82c-41d7-b3c6-ffa95f8585d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/_admin-menu-slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/add-menu-admin-slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/fatal-errors-2024-06-04-a535b8a1c08225060471b6a8b211e571.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-inbox-notifications-2-0-notifications-json-2024-06-04-5582f7d78fec3d10f1c9f56756a02429.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-obw-free-extensions-4-0-extensions-json-2024-06-04-1c26dc01ea1aa337fe1882fe3ea10e31.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-payment-method-promotions-json-2024-06-04-89b444e9c8bd46f2b26acae544dfd171.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-payment-gateway-suggestions-2-0-suggestions-jsoncountryus-2024-06-04-4ba2802117e31e6addf3b59dd38dfd1e.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/_admin-menu-slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/_inc/add-menu-admin/_admin-menu-slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeA.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeA.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeB.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeC&amp;D.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/index/_slider-product-typeC&amp;D.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/nav/main-nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/kalamarket/partials/nav/main-nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-obw-free-extensions-4-0-extensions-json-2024-06-05-94a6b0560556cbc8c86e711c301566a5.log" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/uploads/wc-logs/https-woocommerce-com-wp-json-wccom-obw-free-extensions-4-0-extensions-json-2024-06-05-94a6b0560556cbc8c86e711c301566a5.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/xampp/htdocs/tahlanji.ir",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/tahlanji.ir&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\tahlanji.ir\wp-content\plugins" />
@@ -96,6 +88,7 @@
       <workItem from="1717431556680" duration="5817000" />
       <workItem from="1717486193086" duration="8893000" />
       <workItem from="1717514919901" duration="9280000" />
+      <workItem from="1717613295069" duration="57000" />
     </task>
     <servers />
   </component>

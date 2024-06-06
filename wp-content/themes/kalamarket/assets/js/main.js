@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-  
+    console.log('object');
     //    hover-menu-overlay--------------------------
     $('li.nav-overlay').hover(function () {
         $('.mega-menu').removeClass('active');
