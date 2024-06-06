@@ -1,4 +1,3 @@
-
 <?php
 function kmk_render_slider_html()
 {
@@ -10,7 +9,7 @@ function kmk_render_slider_html()
         add_settings_error('setting', 'setting-mesage', 'تنظیمات ذخیره گردید');
         settings_errors('setting-message');
     }
-    ?>
+?>
     <div class="rp-wrap">
         <form action="options.php" method="post" class="slider-setting">
             <h1><?php echo esc_html(get_admin_page_title()) ?></h1>
@@ -19,7 +18,7 @@ function kmk_render_slider_html()
             <?php submit_button() ?>
         </form>
     </div>
-    <?php
+<?php
 }
 
 /**
@@ -63,26 +62,25 @@ function  kmk_slider_setting_render_html()
 
     $name_slider_1 = get_option('_name_slider_1');
     $name_slider_2 = get_option('_name_slider_2');
-    $name_slider_3= get_option('_name_slider_3');
-    $name_slider_4= get_option('_name_slider_4');
-    $args=[
+    $name_slider_3 = get_option('_name_slider_3');
+    $name_slider_4 = get_option('_name_slider_4');
+    $args = [
         'orderby' => 'name',
         'order'   => 'ASC',
-        'post_type'=>'product'
+        'post_type' => 'product'
     ];
-    $categories=get_categories($args);
-    var_dump($categories);
-    ?>
+    $categories = get_categories($args);
+    // var_dump($categories);
+?>
     <div class="el-wraper">
         <label for="slider1">نام دسته بندی محصول برای اسلایدر 1</label>
-        <input type="text" id="slider1" name="_name_slider_1" value="<?php echo isset( $name_slider_1) ? esc_attr( $name_slider_1) : '' ?>">
+        <input type="text" id="slider1" name="_name_slider_1" value="<?php echo isset($name_slider_1) ? esc_attr($name_slider_1) : '' ?>">
         <label for="slider2">نام دسته بندی محصول برای اسلایدر 2</label>
-        <input type="text" id="slider2" name="_name_slider_2" value="<?php echo isset( $name_slider_2) ? esc_attr( $name_slider_2) : '' ?>">
+        <input type="text" id="slider2" name="_name_slider_2" value="<?php echo isset($name_slider_2) ? esc_attr($name_slider_2) : '' ?>">
         <label for="slider3">نام دسته بندی محصول برای اسلایدر 3</label>
-        <input type="text" id="slider3" name="_name_slider_3" value="<?php echo isset( $name_slider_3) ? esc_attr( $name_slider_3) : '' ?>">
+        <input type="text" id="slider3" name="_name_slider_3" value="<?php echo isset($name_slider_3) ? esc_attr($name_slider_3) : '' ?>">
         <label for="slider4">نام دسته بندی محصول برای اسلایدر 4</label>
-        <input type="text" id="slider4" name="_name_slider_4" value="<?php echo isset( $name_slider_4) ? esc_attr( $name_slider_4) : '' ?>">
+        <input type="text" id="slider4" name="_name_slider_4" value="<?php echo isset($name_slider_4) ? esc_attr($name_slider_4) : '' ?>">
     </div>
-    <?php
+<?php
 }
-
