@@ -16,9 +16,13 @@ function kalamarket_wp_enqueue_scripts(): void
     wp_enqueue_style('nice-select', get_template_directory_uri() . "/assets/css/vendor/nice-select.css");
     wp_enqueue_style('jqZoom', get_template_directory_uri() . "/assets/css/vendor/jquery.jqZoom.css");
     wp_enqueue_style('sweetalert2', get_template_directory_uri() . "/assets/css/vendor/sweetalert2.min.css");
+    //in archive
+    wp_enqueue_style('noUISlider', get_template_directory_uri() . "/assets/css/vendor/noUISlider.min.css");
     // main css:
+
     wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('responsive', get_template_directory_uri() . "/assets/css/responsive.css");
+
 
     //js:
     // file js:
@@ -30,7 +34,13 @@ function kalamarket_wp_enqueue_scripts(): void
     wp_enqueue_script('jquery.nice-select-js', get_template_directory_uri() . '/assets/js/vendor/jquery.nice-select.min.js', ['jquery'], null, true);
     wp_enqueue_script('jquery.jqZoom-js', get_template_directory_uri() . '/assets/js/vendor/jquery.jqZoom.js', ['jquery'], null, true);
     wp_enqueue_script('sweetalert2.all', get_template_directory_uri() . '/assets/js/vendor/sweetalert2.all.min.js', ['jquery'], null, true);
+    //in archive
+
+
+    wp_enqueue_script('nouislider', get_template_directory_uri() . '/assets/js/vendor/nouislider.min.js', ['jquery'], null, true);
+    wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/vendor/theia-sticky-sidebar.min.js', ['jquery'], null, true);
+    wp_enqueue_script('wNumb', get_template_directory_uri() . '/assets/js/vendor/wNumb.js', ['jquery'], null, true);
+
     // main js:
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], null, true);
-    wp_enqueue_script('main1-js', get_template_directory_uri() . '/assets/js/main1.js', ['jquery'], null, true);
 }
