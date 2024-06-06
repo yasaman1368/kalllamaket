@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product content within loops
  *
@@ -15,53 +16,44 @@
  * @version 3.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
 // Ensure visibility.
-if ( empty( $product ) || ! $product->is_visible() ) {
+if (empty($product) || !$product->is_visible()) {
 	return;
 }
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
-	<?php
-	/**
-	 * Hook: woocommerce_before_shop_loop_item.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
 
-	/**
-	 * Hook: woocommerce_before_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
+<div class="col-lg-3 col-md-3 col-xs-12 order-1 d-block mb-3">
+	<section class="product-box product product-type-simple">
+		<div class="thumb">
+			<a href="<?php echo get_the_permalink($product->get_id()); ?>" class="d-block">
+				<div class="promotion-badge">فروش ویژه</div>
+				<div class="product-rate">
+					<i class="fa fa-star active"></i>
+					<i class="fa fa-star active"></i>
+					<i class="fa fa-star active"></i>
+					<i class="fa fa-star active"></i>
+					<i class="fa fa-star"></i>
+				</div>
+				<div class="discount-d">
+					<?php if ($product->is_on_sale()) : ?>
+						<span><?php echo kmkt_discount_price($product->regular_price, $product->sale_price); ?></span>
+					<?php endif ?>
+				</div>
+				<?php echo get_the_post_thumbnail($product->get_id(), '', ['class' => 'img-fluid']) ?>
+			</a>
+		</div>
+		<div class="title">
+			<a href="<?php echo get_the_permalink($product->get_id()); ?>"><?php echo $product->name ?></a>
+		</div>
+		<div class="price">
 
-	/**
-	 * Hook: woocommerce_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
+			<span class="amount"><?php echo !empty($product->regular_price) ? $product->regular_price . '<span>تومان</span>' : '<span style="color:red;">برای استعلام قیمت با پشتیبانی تماس بگیرید</span>' ?>
 
-	/**
-	 * Hook: woocommerce_after_shop_loop_item_title.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
-
-	/**
-	 * Hook: woocommerce_after_shop_loop_item.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
-</li>
+			</span>
+		</div>
+	</section>
+</div>
