@@ -431,6 +431,11 @@ jQuery(document).ready(function ($) {
     if ($('.custom-select-ui').length) {
         $('.custom-select-ui select').niceSelect();
     }
+    if ($('.catalog-wc').length) {
+        $('.catalog-wc select').niceSelect();
+      
+
+    }
     // nice-select-----------------------------------
     //    price-range--------------------------------
     var nonLinearStepSlider = document.getElementById('slider-non-linear-step');

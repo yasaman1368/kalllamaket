@@ -4,8 +4,10 @@
 <?php
 // remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 //remove_action('woocommerce_before_main_content', 'WC_Structured_Data::generate_website_data()');
-remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+//remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10);
 
 // woocommerce setup
 add_action('after_setup_theme', 'kmkt_theme_setup');

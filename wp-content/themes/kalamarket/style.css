@@ -9994,3 +9994,9 @@ body.light .progress-wrap svg.progress-circle path {
     max-width: 20px;
     max-height: 20px;
 }
+.catalog-wc form{
+    display: flex;
+    flex-direction: row;
+  
+}
+

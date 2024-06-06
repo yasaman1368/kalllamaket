@@ -23,32 +23,15 @@ if (!defined('ABSPATH')) {
 <div class="col-lg-9 col-md-9 col-xs-12 pl">
 	<div class="shop-archive-content mt-3 d-block">
 		<div class="archive-header">
-			<h2 class="archive-header-title"><?php;
+			<h2 class="archive-header-title"><?php woocommerce_page_title()
 												?></h2>
 			<div class="sort-tabs mt-0 d-inline-block pr">
 				<h4>مرتب‌سازی بر اساس :</h4>
 			</div>
-			<div class="nav-sort-tabs-res">
-				<ul class="nav sort-tabs-options" id="myTab" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" id="Most-visited-tab" data-toggle="tab" href="#Most-visited" role="tab" aria-controls="Most-visited" aria-selected="true">پربازدیدترین</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="Bestselling-tab" data-toggle="tab" href="#Bestselling" role="tab" aria-controls="Bestselling" aria-selected="false">پرفروش‌ترین‌</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="Most-Popular-tab" data-toggle="tab" href="#Most-Popular" role="tab" aria-controls="Most-Popular" aria-selected="false">محبوب‌ترین</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="newest-tab" data-toggle="tab" href="#newest" role="tab" aria-controls="newest" aria-selected="false">جدیدترین</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="cheapest-tab" data-toggle="tab" href="#cheapest" role="tab" aria-controls="cheapest" aria-selected="false">ارزان‌ترین</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" id="most-expensive-tab" data-toggle="tab" href="#most-expensive" role="tab" aria-controls="most-expensive" aria-selected="false">گران‌ترین</a>
-					</li>
-				</ul>
+			<div class="catalog-wc">
+				<?php
+				do_action('woocommerce_before_shop_loop');
+				?>
 			</div>
 		</div>
 		<div class="product-items">
