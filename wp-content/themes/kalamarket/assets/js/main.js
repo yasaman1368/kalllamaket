@@ -428,13 +428,12 @@ jQuery(document).ready(function ($) {
     });
     // SweetAlert -----------------------------------
     // nice-select-----------------------------------
+  
     if ($('.custom-select-ui').length) {
         $('.custom-select-ui select').niceSelect();
     }
     if ($('.catalog-wc').length) {
         $('.catalog-wc select').niceSelect();
-      
-
     }
     // nice-select-----------------------------------
     //    price-range--------------------------------

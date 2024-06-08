@@ -32,6 +32,7 @@ if (!defined('ABSPATH')) {
 				<?php
 				do_action('woocommerce_before_shop_loop');
 				?>
+
 			</div>
 		</div>
 		<div class="product-items">

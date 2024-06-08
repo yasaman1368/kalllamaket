@@ -40,7 +40,7 @@ if (empty($product) || !$product->is_visible()) {
 				</div>
 				<div class="discount-d">
 					<?php if ($product->is_on_sale()) : ?>
-						<span><?php echo kmkt_discount_price($product->regular_price, $product->sale_price); ?></span>
+						<span>%<?php echo kmkt_discount_price($product->regular_price, $product->sale_price); ?></span>
 					<?php endif ?>
 				</div>
 				<?php echo get_the_post_thumbnail($product->get_id(), '', ['class' => 'img-fluid']) ?>

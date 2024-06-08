@@ -9999,4 +9999,55 @@ body.light .progress-wrap svg.progress-circle path {
     flex-direction: row;
   
 }
+.catalog-wc div.nice-select{
+    top: -9px;
+}
+/* nav.woocommerce-pagination{
+    display: block;
+} */
+
+nav.woocommerce-pagination ul.page-numbers{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+nav.woocommerce-pagination ul.page-numbers li a.page-numbers:hover {
+    color: #0056b3;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+nav.woocommerce-pagination ul.page-numbers li a.page-numbers {
+      
+    border: none;
+    margin-left: 5px !important;
+    border-radius: 50px;
+    color: #666 !important;
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+  
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border:0 #dee2e6;
+    text-decoration: none;
+    font-family: IRANSans;
+}
+        
+  
+    nav.woocommerce-pagination ul.page-numbers li span.current{
+        border: none !important;
+        margin-left: 5px !important;
+        border-radius: 50px !important;
+        color: #666 !important;
+        background: #651fff;
+        color: #fff !important;
+        padding: 5px 11px;
+        position: relative;
+        top: 7px;
+    }
 
