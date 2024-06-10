@@ -40,7 +40,10 @@ function kalamarket_wp_enqueue_scripts(): void
     wp_enqueue_script('nouislider', get_template_directory_uri() . '/assets/js/vendor/nouislider.min.js', ['jquery'], null, true);
     wp_enqueue_script('theia-sticky-sidebar', get_template_directory_uri() . '/assets/js/vendor/theia-sticky-sidebar.min.js', ['jquery'], null, true);
     wp_enqueue_script('wNumb', get_template_directory_uri() . '/assets/js/vendor/wNumb.js', ['jquery'], null, true);
+    //in sigle wc product:
+    wp_enqueue_script('lightgallery-all-js', get_template_directory_uri() . '/assets/js/vendor/lightgallery-all.js', ['jquery'], null, true);
+    wp_enqueue_script('jquery.ez-plus', get_template_directory_uri() . '/assets/js/vendor/jquery.ez-plus.js', ['jquery'], null, true);
 
-    // main js:
+    // main js:y
     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', ['jquery'], null, true);
 }
