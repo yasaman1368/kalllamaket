@@ -92,7 +92,8 @@
                         <span>
                             برند:
                         </span>
-                        <a href="#" class="product-link product-tag-title">سامسونگ</a>
+
+                        <a href="#" class="product-link product-tag-title"><?php echo get_post_meta(get_the_ID(),'_p_brand',true) ?></a>
                     </li>
                 </ul>
             </div>
