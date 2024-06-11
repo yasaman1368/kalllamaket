@@ -124,30 +124,22 @@
                                     <div class="modal-content">
                                         <div class="modal-body">
                                             <div id="custom-events">
-                                                <a href="">
-                                                    <img src="">
-                                                </a>
-                                                <a href="<?php echo wp_get_attachment_url($image) ?>">
-                                                    <img src="<?php echo wp_get_attachment_url($image) ?>">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-3.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-3.jpg">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-4.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-4.jpg">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-5.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-5.jpg">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-6.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-6.jpg">
-                                                </a>
-                                                <a href="assets/images/page-single-product/product-img/product-img-note10-big-7.jpg">
-                                                    <img src="assets/images/page-single-product/product-img/product-img-note10-big-7.jpg">
-                                                </a>
+
+                                                <?php
+                                                global $product;
+
+                                                $images =  $product->get_gallery_image_ids();
+
+                                                if (is_array($images) && !empty($images)) :
+                                                    foreach ($images as $image) :
+
+                                                ?>
+
+                                                        <a href="<?php echo kmkt_the_attachment_image($image) ?>">
+                                                            <img src="<?php echo kmkt_the_attachment_image($image) ?>">
+                                                        </a>
+                                                    <?php endforeach ?>
+                                                <?php endif ?>
                                             </div>
                                         </div>
                                     </div>
@@ -198,32 +190,7 @@
                                         <?php $i++;
                                         endforeach ?>
                                     <?php endif ?>
-                                    <!-- <div class="owl-item active" style="width: 100.727px; margin-left: 10px;">
-												<li class="item">
-													<a href="#" class="elevatezoom-gallery active" data-update="" data-image="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg" data-zoom-image="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg">
-														<img src="assets/images/page-single-product/product-img/product-img-note10-big-2.jpg" width="100"></a>
-												</li>
-											</div>
-											<div class="owl-item active" style="width: 100.727px; margin-left: 10px;">
-												<li class="item">
-													<a href="#" class="elevatezoom-gallery" data-image="assets/images/page-single-product/product-img/product-img-note10-big-3.jpg" data-zoom-image="assets/images/page-single-product/product-img/product-img-note10-big-3.jpg">
-														<img src="assets/images/page-single-product/product-img/product-img-note10-big-3.jpg" width="100">
-													</a>
-												</li>
-											</div>
-											<div class="owl-item active" style="width: 100.727px; margin-left: 10px;">
-												<li class="item">
-													<a href="#" class="elevatezoom-gallery" data-image="assets/images/page-single-product/product-img/product-img-note10-big-4.jpg" data-zoom-image="assets/images/page-single-product/product-img/product-img-note10-big-4.jpg">
-														<img src="assets/images/page-single-product/product-img/product-img-note10-big-4.jpg" width="100"></a>
-												</li>
-											</div>
-											<div class="owl-item active" style="width: 100.727px; margin-left: 10px;">
-												<li class="item">
-													<a href="#" class="elevatezoom-gallery" data-image="assets/images/page-single-product/product-img/product-img-note10-big-5.jpg" data-zoom-image="assets/images/page-single-product/product-img/product-img-note10-big-5.jpg">
-														<img src="assets/images/page-single-product/product-img/product-img-note10-big-5.jpg" width="100">
-													</a>
-												</li>
-											</div> -->
+
                                 </div>
                             </div>
                             <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-right"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="fa fa-angle-left"></i></button></div>

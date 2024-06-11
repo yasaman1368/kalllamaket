@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    console.log('object');
+
     //    hover-menu-overlay--------------------------
     $('li.nav-overlay').hover(function () {
         $('.mega-menu').removeClass('active');
@@ -475,18 +475,19 @@ jQuery(document).ready(function ($) {
 
         btnUp.click(function () {
             var oldValue = parseFloat(input.val());
-            if (oldValue >= max) {
+            if (oldValue >= parseInt(max) ){
                 var newVal = oldValue;
-            } else {
-                var newVal = oldValue + 1;
-            }
+                } else {
+                    var newVal = oldValue + 1;
+                    }
+            
             spinner.find("input").val(newVal);
             spinner.find("input").trigger("change");
         });
 
         btnDown.click(function () {
             var oldValue = parseFloat(input.val());
-            if (oldValue <= min) {
+            if (oldValue <=parseInt(min)) {
                 var newVal = oldValue;
             } else {
                 var newVal = oldValue - 1;
