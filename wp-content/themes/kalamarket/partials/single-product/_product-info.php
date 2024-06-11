@@ -93,7 +93,7 @@
                             برند:
                         </span>
 
-                        <a href="#" class="product-link product-tag-title"><?php echo get_post_meta(get_the_ID(),'_p_brand',true) ?></a>
+                        <a href="#" class="product-link product-tag-title"><?php echo get_post_meta(get_the_ID(), '_p_brand', true) ?></a>
                     </li>
                 </ul>
             </div>
@@ -173,31 +173,46 @@
                         <div class="product-seller-row price">
                             <span class="title"> قیمت:</span>
                             <a href="#" class="product-name">
-                                <span class="amount">
-                                    14,350,000
+
+                                <?php global $product; ?>
+                                <span class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price amount'));
+                                                ?> "><?php echo $product->sale_price;
+                                                        ?>
                                     <span>تومان</span>
                                 </span>
+
                             </a>
                         </div>
-                        <div class="product-seller-row guarantee">
-                            <span class="title mt-3"> تعداد:</span>
-                            <div class="quantity pl">
-                                <input type="number" min="1" max="100" step="1" value="1">
-                                <div class="quantity-nav">
-                                    <div class="quantity-button quantity-up">+</div>
-                                    <div class="quantity-button quantity-down">-</div>
-                                </div>
+                        <!-- <form class="cart" action="http://tahlanji.ir/product/%d8%af%d9%88%d8%b1%d8%a8%db%8c%d9%86-%d8%b3%d8%a7%d9%85%d8%b3%d9%88%d9%86%da%af/" method="post" enctype="multipart/form-data">
+
+                            <div class="quantity">
+                                <label class="screen-reader-text" for="quantity_66674be41d1cb">دوربین سامسونگ عدد</label>
+                                <input type="number" id="quantity_66674be41d1cb" class="input-text qty text" name="quantity" value="5" aria-label="Product quantity" size="4" min="1" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
                                 <div class="quantity-nav">
                                     <div class="quantity-button quantity-up">+</div>
                                     <div class="quantity-button quantity-down">-</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="product-seller-row add-to-cart">
-                            <a href="#" class="btn-add-to-cart btn btn-primary">
-                                <span class="btn-add-to-cart-txt">افزودن به سبد خرید</span>
-                            </a>
-                        </div>
+
+                            <button type="submit" name="add-to-cart" value="22" class="single_add_to_cart_button button alt">افزودن به سبد خرید</button>
+
+                        </form> -->
+                        <form class="cart" action="http://tahlanji.ir/product/%d8%af%d9%88%d8%b1%d8%a8%db%8c%d9%86-%d8%b3%d8%a7%d9%85%d8%b3%d9%88%d9%86%da%af/" method="post" enctype="multipart/form-data">
+                            <div class="product-seller-row guarantee">
+                                <span class="title mt-3"> تعداد:</span>
+                                <div class="quantity pl">
+                                    <input type="number" id="quantity_66674be41d1cb" class="input-text qty text" name="quantity" value="1" aria-label="Product quantity" size="4" min="1" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+
+                                    <div class="quantity-nav">
+                                        <div class="quantity-button quantity-up">+</div>
+                                        <div class="quantity-button quantity-down">-</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" name="add-to-cart" value="22" class="single_add_to_cart_button button alt p-add-to-card-btn">افزودن به سبد خرید</button>
+
+                        </form>
+
                     </div>
                 </div>
             </div>

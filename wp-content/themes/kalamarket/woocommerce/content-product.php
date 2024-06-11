@@ -40,7 +40,14 @@ if (empty($product) || !$product->is_visible()) {
 				</div>
 				<div class="discount-d">
 					<?php if ($product->is_on_sale()) : ?>
-						<span>%<?php echo kmkt_discount_price($product->regular_price, $product->sale_price); ?></span>
+						<span>%<?php
+								if ($product->is_type('variable')) {
+									echo kmkt_discount_price($product->get_variation_regular_price('max'), $product->get_variation_sale_price('min'));
+								} else {
+									echo kmkt_discount_price($product->get_regular_price(), $product->get_sale_price());
+								}
+
+								?></span>
 					<?php endif ?>
 				</div>
 				<?php echo get_the_post_thumbnail($product->get_id(), '', ['class' => 'img-fluid']) ?>
@@ -50,10 +57,29 @@ if (empty($product) || !$product->is_visible()) {
 			<a href="<?php echo get_the_permalink($product->get_id()); ?>"><?php echo $product->name ?></a>
 		</div>
 		<div class="price">
+			<?php
+			if ($product->is_type('variable')) { ?>
+				<del class="regular-price">
+					<span class="amount"><?php
+											echo !empty($product->get_variation_regular_price('max')) ? $product->get_variation_regular_price() : ''
+											?></span></del>
+				<span class="amount">__
+					<?php
+					echo !empty($product->get_variation_sale_price('min')) ? $product->get_variation_sale_price('min') : ''
+					?>
+				</span>
 
-			<span class="amount"><?php echo !empty($product->regular_price) ? $product->regular_price . '<span>تومان</span>' : '<span style="color:red;">برای استعلام قیمت با پشتیبانی تماس بگیرید</span>' ?>
+			<?php
+			} else {
 
-			</span>
+			?>
+				<del class="regular-price">
+					<span class="amount"><?php echo !empty($product->regular_price) ? $product->regular_price . '<span>تومان</span>' : '' ?>
+				</del>
+				<span class="amount">__<?php echo !empty($product->sale_price) ? $product->sale_price . '<span>تومان</span>' : '<span style="color:red;">برای استعلام قیمت با پشتیبانی تماس بگیرید</span>' ?>
+
+				<?php } ?>
+				</span>
 		</div>
 	</section>
 </div>
