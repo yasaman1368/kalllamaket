@@ -171,16 +171,18 @@
 
 
 
-                            <div class="owl-stage-outer">
-                                <div class="owl-stage" style="transform: translate3d(111px, 0px, 0px); transition: all 0s ease 0s; width: 554px;">
-                                    <?php $i = 0;
+                            <?php $i = 0;
 
-                                    $images = $product->get_gallery_image_ids();
-                                    if (is_array($images) && !empty($images)) :
+                            $images = $product->get_gallery_image_ids();
+                            if (is_array($images) && !empty($images)) :
+                            ?>
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage" style="transform: translate3d(111px, 0px, 0px); transition: all 0s ease 0s; width: 554px;">
+                                        <?php
                                         foreach ($images as $image) :
+                                        ?>
 
 
-                                    ?>
                                             <div class=" owl-item<?php echo $i = 0 ? '' : ' active' ?>" style="width: 100.727px; margin-left: 10px;">
                                                 <li class="item">
                                                     <a href="#" class="elevatezoom-gallery <?php echo $i = 0 ? '' : ' active' ?>" data-update="" data-image="<?php echo wp_get_attachment_url($image) ?>" data-zoom-image="<?php echo wp_get_attachment_url($image) ?>">
@@ -189,12 +191,13 @@
                                             </div>
                                         <?php $i++;
                                         endforeach ?>
-                                    <?php endif ?>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-right"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="fa fa-angle-left"></i></button></div>
-                            <div class="owl-dots disabled"></div>
+
+                                <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-angle-right"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="fa fa-angle-left"></i></button></div>
+                                <div class="owl-dots disabled"></div>
+                            <?php endif ?>
                         </ul>
                     </div>
                 </div>
