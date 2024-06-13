@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Single Product Meta
  *
@@ -15,26 +16,37 @@
  * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
 global $product;
 ?>
-<div class="product_meta">
+<div class="product_meta product-config-wrapper">
+	<div class="product-directory">
+		<ul>
+			<?php do_action('woocommerce_product_meta_start'); ?>
 
-	<?php do_action( 'woocommerce_product_meta_start' ); ?>
+			<?php if (wc_product_sku_enabled() && !empty($product->get_sku()) && ($product->get_sku() || $product->is_type('variable'))) : ?>
 
-	<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
+				<span class="sku_wrapper"><?php esc_html_e('SKU:', 'woocommerce'); ?> <span class="sku"><?php echo ($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'woocommerce'); ?></span></span>
 
-		<span class="sku_wrapper"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
+			<?php endif; ?>
 
-	<?php endif; ?>
+			<?php echo wc_get_product_category_list($product->get_id(), ', ', '<li><span class="posted_in"><span><i class=""fa fa-archive"></i></span>' . _n('Category:', 'Categories:', count($product->get_category_ids()), 'woocommerce') . ' ', '</span></li>'); ?>
 
-	<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+			<?php echo wc_get_product_tag_list($product->get_id(), ', ', '<li><span class="tagged_as"><i class="fa fa-tags"></i></span>' . _n('Tag:', 'Tags:', count($product->get_tag_ids()), 'woocommerce') . ' ', '</li>'); ?>
 
-	<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+			<?php if (!empty(get_post_meta($product->get_id(), '_p_brand', true))) : ?>
+				<li>
+					<span class="p-brand">
+						برند:
+					</span>
 
-	<?php do_action( 'woocommerce_product_meta_end' ); ?>
-
+					<a href="#" class="product-link product-tag-title"><?php echo get_post_meta($product->get_id(), '_p_brand', true) ?></a>
+				</li>
+			<?php endif ?>
+			<?php do_action('woocommerce_product_meta_end'); ?>
+		</ul>
+	</div>
 </div>

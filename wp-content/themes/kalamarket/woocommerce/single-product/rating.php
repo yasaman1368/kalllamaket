@@ -32,16 +32,22 @@ $average      = $product->get_average_rating();
 
 if ($rating_count > 0) : ?>
 
-	<div class="woocommerce woocommerce-product-rating rating-custom">
-		<?php echo wc_get_rating_html($average, $rating_count); // WPCS: XSS ok. 
-		?>
-		<?php if (comments_open()) : ?>
-			<?php //phpcs:disable 
+	<div class="woocommerce woocommerce-product-rating rating-custom product-attributes">
+		<div class="product-config">
+			<span class="product-title-en">Samsung Galaxy Note 10 Dual SIM 256GB Mobile
+				Phone</span>
+
+
+			<?php echo wc_get_rating_html($average, $rating_count); // WPCS: XSS ok. 
 			?>
-			<a href="#reviews" class="woocommerce-review-link" rel="nofollow"><?php printf(_n('%s customer review', '%s customer reviews', $review_count, 'woocommerce'), '<span class="count">' . esc_html($review_count) . '</span>'); ?></a>
-			<?php // phpcs:enable 
-			?>
-		<?php endif ?>
+			<?php if (comments_open()) : ?>
+				<?php //phpcs:disable 
+				?>
+				<a href="#reviews" class="woocommerce-review-link" rel="nofollow"><?php printf(_n('%s customer review', '%s customer reviews', $review_count, 'woocommerce'), '<span class="count">' . esc_html($review_count) . '</span>'); ?></a>
+				<?php // phpcs:enable 
+				?>
+			<?php endif ?>
+		</div>
 	</div>
 
 <?php endif; ?>

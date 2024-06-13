@@ -6600,9 +6600,22 @@ main.single-product .product .gallery-items li img:hover {
     color: #656565;
 }
 
-.product .product-info .product-config-wrapper .product-directory ul li span i {
+.product .product-info .product-config-wrapper .product-directory ul li span.posted_in span   i {
     vertical-align: middle;
     margin-left: 5px;
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome !important;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.product .product-info .product-config-wrapper .product-directory ul li span i::before{
+        content: "\f187";
+
+}
+.product .product-info .product-config-wrapper .product-directory ul li span.tagged_as i::before{
+    content: "\f02c";
+
 }
 
 .product .product-info .product-config-wrapper .product-directory ul li a.product-link {
@@ -10099,6 +10112,9 @@ nav.woocommerce-pagination ul.page-numbers li a.page-numbers {
     line-height: 1;
     font-size: 1em;
     font-family: star !important;
+   float: none;
+   margin-right: 100px;
+   display: inline-block;
     }
     
     .rating-custom .star-rating span {
@@ -10132,10 +10148,10 @@ nav.woocommerce-pagination ul.page-numbers li a.page-numbers {
 /* a link wocommerce review link */
 div.woocommerce a.woocommerce-review-link{
     position: relative;
-    left: -21%;
-
+    display: inline-block;
     color: #ccc2c9;
-    font-size: medium;
+    font-size: small;
+    margin-right: 50px;
 }
 button.p-add-to-card-btn{
     
@@ -10168,5 +10184,14 @@ div.price del.regular-price{
     padding-left: 0.5rem;
     color: #6c757d;
     content: "";
+}
+div.product-headline h1.product_title{
+    margin: 0.8rem 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #666666;
+    display: inline-block;
+
 }
 

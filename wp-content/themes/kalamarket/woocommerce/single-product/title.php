@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Single Product title
  *
@@ -15,8 +16,17 @@
  * @version    1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
+?>
+<div class="product-headline">
+	<?php
+	the_title('<h1 class="product_title entry-title">', '</h1>');
+	?>
 
-the_title( '<h1 class="product_title entry-title">', '</h1>' );
+	<div class="product-guaranteed text-success">
+		12
+		<span>فروش موفق</span>
+	</div>
+</div>
