@@ -27,41 +27,64 @@ $variations_attr = function_exists('wc_esc_json') ? wc_esc_json($variations_json
 do_action('woocommerce_before_add_to_cart_form'); ?>
 <div class="col=lg-6 col-md-6 col-xs-12 pr">
 	<div class="product-variants">
-		<form class="variations_form cart" action="<?php echo esc_url(apply_filters('woocommerce_add_to_cart_form_action', $product->get_permalink())); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint($product->get_id()); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. 
-																																																																								?>">
-			<?php do_action('woocommerce_before_variations_form'); ?>
+		<div class="table-select">
+			<form class="variations_form cart" action="<?php echo esc_url(apply_filters('woocommerce_add_to_cart_form_action', $product->get_permalink())); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint($product->get_id()); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. 
+																																																																									?>">
+				<?php do_action('woocommerce_before_variations_form'); ?>
 
-			<?php if (empty($available_variations) && false !== $available_variations) : ?>
-				<p class="stock out-of-stock"><?php echo esc_html(apply_filters('woocommerce_out_of_stock_message', __('This product is currently out of stock and unavailable.', 'woocommerce'))); ?></p>
-			<?php else : ?>
+				<?php if (empty($available_variations) && false !== $available_variations) : ?>
+					<p class="stock out-of-stock"><?php echo esc_html(apply_filters('woocommerce_out_of_stock_message', __('This product is currently out of stock and unavailable.', 'woocommerce'))); ?></p>
+				<?php else : ?>
 
-				<table class="variations" cellspacing="0" role="presentation">
-					<tbody>
-						<?php foreach ($attributes as $attribute_name => $options) : ?>
-							<tr>
-								<th class="label"><label for="<?php echo esc_attr(sanitize_title($attribute_name)); ?>"><?php echo wc_attribute_label($attribute_name); // WPCS: XSS ok. 
-																														?></label></th>
-								<td class="value">
-									<?php
-									wc_dropdown_variation_attribute_options(
-										array(
-											'options'   => $options,
-											'attribute' => $attribute_name,
-											'product'   => $product,
-										)
-									);
-									echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__('Clear', 'woocommerce') . '</a>')) : '';
-									?>
-								</td>
-							</tr>
-						<?php endforeach; ?>
-					</tbody>
-				</table>
+					<table class="variations" cellspacing="0" role="presentation">
+						<tbody>
+							<?php foreach ($attributes as $attribute_name => $options) : ?>
+								<tr>
+									<th class="label"><label for="<?php echo esc_attr(sanitize_title($attribute_name)); ?>"><?php echo wc_attribute_label($attribute_name); // WPCS: XSS ok. 
+																															?></label></th>
+									<td class="value">
+										<?php
+										wc_dropdown_variation_attribute_options(
+											array(
+												'options'   => $options,
+												'attribute' => $attribute_name,
+												'product'   => $product,
+											)
+										);
+										echo end($attribute_keys) === $attribute_name ? wp_kses_post(apply_filters('woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__('Clear', 'woocommerce') . '</a>')) : '';
+										?>
+									</td>
+								</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
 
-				<?php do_action('woocommerce_after_variations_table'); ?>
-
-				<div class="single_variation_wrap">
+					<?php do_action('woocommerce_after_variations_table');
+					?>
 					<?php
+					/**
+					 * Hook: woocommerce_after_single_product_summary.
+					 *
+					 * @hooked woocommerce_output_product_data_tabs - 10
+					 * @hooked woocommerce_upsell_display - 15
+					 * @hooked woocommerce_output_related_products - 20
+					 */
+					do_action('woocommerce_after_single_product_summary');
+					?>
+		</div>
+
+		<div class="single_variation_wrap product-seller-info">
+			<div class="seller-info-changable">
+				<div class="product-seller-row vendor">
+					<span class="title"> فروشنده:</span>
+					<a href="#" class="product-name">دیجی اسمارت</a>
+				</div>
+				<div class="product-seller-row guarantee">
+					<span class="title"> گارانتی:</span>
+					<a href="#" class="product-name">۱۸ ماهه دیجی اسمارت</a>
+				</div>
+
+				<?php
 					/**
 					 * Hook: woocommerce_before_single_variation.
 					 */
@@ -80,16 +103,57 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 					 * Hook: woocommerce_after_single_variation.
 					 */
 					do_action('woocommerce_after_single_variation');
-					?>
-				</div>
-			<?php endif; ?>
+				?>
+			</div>
+		</div>
+	<?php endif; ?>
 
-			<?php do_action('woocommerce_after_variations_form'); ?>
-		</form>
+	<?php do_action('woocommerce_after_variations_form'); ?>
+	</form>
 
-		<?php
-		do_action('woocommerce_after_add_to_cart_form');
-		?>
+	<?php
+	do_action('woocommerce_after_add_to_cart_form');
+	?>
 	</div>
+
 </div>
+<!-- <div class="col=lg-6 col-md-6 col-xs-12 pr">
+	<div class="product-seller-info">
+		<div class="seller-info-changable">
+			<div class="product-seller-row vendor">
+				<span class="title"> فروشنده:</span>
+				<a href="#" class="product-name">دیجی اسمارت</a>
+			</div>
+			<div class="product-seller-row guarantee">
+				<span class="title"> گارانتی:</span>
+				<a href="#" class="product-name">۱۸ ماهه دیجی اسمارت</a>
+			</div>
+			<div class="product-seller-row price">
+				<span class="title"> قیمت:</span>
+				<a href="#" class="product-name">
+					<span class="amount price-finish-single-page">
+						14,350,000
+						<span> تومان </span>
+					</span>
+				</a>
+			</div>
+			<div class="product-seller-row guarantee">
+				<span class="title mt-3"> تعداد:</span>
+				<div class="quantity pl">
+					<input type="number" min="1" max="100" step="1" value="1">
+					<div class="quantity-nav ">
+						<div class="quantity-button quantity-up">+</div>
+						<div class="quantity-button quantity-down">-</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="product-seller-row add-to-cart">
+				<a href="#" class="btn-add-to-cart btn btn-primary">
+					<span class="btn-add-to-cart-txt">افزودن به سبد خرید</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div> -->
 </div>

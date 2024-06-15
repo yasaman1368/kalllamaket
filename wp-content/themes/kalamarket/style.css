@@ -6753,7 +6753,7 @@ main.single-product .product .gallery-items li img:hover {
     padding: 0 15px 0 0;
 }
 
-.product .product-info .product-config-wrapper .product-params ul li::before {
+/* .product .product-info .product-config-wrapper .product-params ul li::before {
     content: "";
     width: 5px;
     height: 5px;
@@ -6764,7 +6764,7 @@ main.single-product .product .gallery-items li img:hover {
     position: absolute;
     right: 0;
     top: 10px;
-}
+} */
 
 .product .product-info .product-config-wrapper .product-params ul li span:first-child {
     margin-left: 5px;
@@ -10194,4 +10194,5 @@ div.product-headline h1.product_title{
     display: inline-block;
 
 }
+
 

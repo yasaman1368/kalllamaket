@@ -633,5 +633,18 @@ jQuery(document).ready(function ($) {
     $customEvents.on('onBeforeSlide.lg', function (event, prevIndex, index) {
         $('.lg-outer').css('background-color', colours[index])
     });
-    // product-img-----------------------------
+//  product seller info
+$('body').on('change','td.value select',function (e) { 
+    e.preventDefault();
+
+    // Extract the text content from the <bdi> element
+const priceText=$('ins span.amount bdi').text();
+// Remove the non-numeric characters (including Persian text and commas) to get the number
+const price=parseFloat(priceText.replace(/[^\d.]/g,''));
+if(price){
+    var formattedPrice = price + ' <span>تومان</span>';
+    $('span.price-finish-single-page').html(formattedPrice);
+}
+
+});
 });
